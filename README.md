@@ -1,67 +1,132 @@
-# 🚀 Stellar Crowdfund (Level 3 - Orange Belt)
+# 🌟 Stellar Crowdfund dApp
+### 🚀 Level 3 – Orange Belt Submission
 
-A production-ready, high-performance decentralized crowdfunding application built on the **Stellar Soroban** network. This project demonstrates advanced Web3 UX patterns, real-time ledger synchronization, and robust testing.
+A production-ready decentralized crowdfunding application built on the Stellar Testnet using Soroban smart contracts. This dApp enables users to connect multiple wallets, donate XLM, view real-time campaign progress directly from the blockchain, and includes robust frontend testing.
 
-![Demo Placeholder](https://via.placeholder.com/800x450?text=Stellar+Crowdfund+UI+Preview)
+## 🌐 Live Demo
+*(Add your deployed link here if applicable)*
 
-## ✨ Key Features
+## 🎯 Objective
+To build a decentralized application that:
+- Supports multi-wallet integration
+- Interacts with a deployed smart contract
+- Displays real-time blockchain data
+- Handles transactions and errors effectively
+- **Includes a comprehensive Jest Testing Suite (Level 3 Requirement)**
 
-- **🌐 Multi-Wallet Integration**: Seamless connection via `StellarWalletsKit` (Freighter, etc.).
-- **⚡ Real-Time Sync**: Polled event listeners synchronize the UI with the blockchain every 5 seconds.
-- **💾 Smart Caching**: `localStorage` integration for instant page loads and background data refreshing.
-- **🎨 Premium UI/UX**:
-  - Modern glassmorphism design using **Tailwind CSS**.
-  - Smooth, buttery animations with **Framer Motion**.
-  - Interactive confetti celebrations for successful donations.
-  - Responsive layout optimized for all devices.
-- **📢 Live Feedback**: Real-time toast notifications for transaction status (Pending/Success/Fail).
-- **🧪 Robust Testing**: Logic verification suite powered by **Jest**.
+## 🚀 Core Features
 
-## 🛠 Tech Stack
+### 🔗 Multi-Wallet Integration
+Integrated using `stellar-wallets-kit`.
+Supports:
+- Freighter (mandatory)
+- Extensible for other Stellar wallets
+- Connect & disconnect functionality
+- Displays connected wallet address
 
-- **Frontend**: React 19, Vite, Tailwind CSS
-- **Interactions**: `@stellar/stellar-sdk`, `@creit.tech/stellar-wallets-kit`
-- **Animations**: `framer-motion`, `canvas-confetti`
-- **Utility**: `lucide-react` (icons), `react-hot-toast` (notifications)
-- **Testing**: Jest, React Testing Library
+### 📜 Soroban Smart Contract
+**Contract ID:** `CAXJ47NQ4U4BDLNARPTPBUXGCKSX7U2TP3CEEKIAJYRQ6D3TFDGFAAYS`
+**Functions:**
+- `donate(amount)` → Accepts XLM and updates total funds
+- `get_total_funds()` → Returns current campaign balance
+**Events:**
+- Emits `Donate` event for each transaction
 
-## 🚀 Getting Started
+### 🔄 Real-Time Data Synchronization
+Uses Soroban RPC (`getEvents`) — No backend required.
+- Live total funds update
+- Dynamic donor leaderboard
+- Automatic UI refresh after transactions
+
+### 💸 Transaction Handling
+Tracks transaction lifecycle:
+- ⏳ Pending
+- ✅ Success (with Confetti animation 🎉)
+- ❌ Failed
+
+### ⚠️ Error Handling
+Handles cases:
+- ❌ Wallet not found
+- ❌ Transaction rejected by user
+- ❌ Insufficient balance
+
+### 🧪 Jest Testing Suite (Level 3 Feature)
+Comprehensive frontend testing for core dApp logic:
+- Campaign Initialization defaults
+- Donation calculation logic
+- Progress percentage math
+- Edge cases (Max funding caps)
+
+## 🎨 UI / UX
+- Clean modern glassmorphism design (Tailwind CSS)
+- Responsive layout
+- Interactive components with hover states
+- Confetti animation on success
+- Real-time progress bar
+
+## 📂 Project Structure
+```text
+stellar-multiwallet-dapp/
+│
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── hooks/
+│   │   ├── services/
+│   │   ├── utils/
+│   │   ├── __tests__/
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   ├── tests/
+│   └── package.json
+│
+├── contracts/
+│
+└── README.md
+```
+
+## 🧪 Testnet Details
+- **Network:** Stellar Testnet
+- **Explorer:** [https://stellar.expert](https://stellar.expert)
+- **Fund Wallet:** [Friendbot](https://friendbot.stellar.org)
+
+## 💻 Running Locally
 
 ### Prerequisites
-- Node.js (v18+)
-- [Freighter Wallet](https://www.freighter.app/) extension installed
+- Node.js installed
+- Freighter Wallet installed (set to Testnet)
 
 ### Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/AjinkyaMandlik/stellar-dapp.git
-   ```
-2. Navigate to the frontend directory:
-   ```bash
-   cd stellar-multiwallet-dapp/frontend
-   ```
-3. Install dependencies:
-   ```bash
-   npm install
-   ```
-4. Start the development server:
-   ```bash
-   npm run dev
-   ```
+```bash
+git clone https://github.com/AjinkyaMandlik/stellar-crowdfund-dapp-level3.git
+cd stellar-multiwallet-dapp
+npm install --prefix frontend
+npm run dev
+```
+Open: 👉 http://localhost:5173
 
 ### Running Tests
-To verify the campaign logic and progress calculations:
+Ensure you are in the root directory then run:
 ```bash
 npm test
 ```
 
-## 📜 Contract Details
-- **Network**: Stellar Testnet
-- **Contract ID**: `CAXJ47NQ4U4BDLNARPTPBUXGCKSX7U2TP3CEEKIAJYRQ6D3TFDGFAAYS`
-- **Explorer**: [Stellar.Expert](https://stellar.expert/explorer/testnet/contract/CAXJ47NQ4U4BDLNARPTPBUXGCKSX7U2TP3CEEKIAJYRQ6D3TFDGFAAYS)
+## 🛠 Tech Stack
+- **Frontend:** React (Vite)
+- **Styling:** Tailwind CSS
+- **Smart Contract:** Soroban (Rust)
+- **Blockchain SDK:** `@stellar/stellar-sdk`
+- **Wallet Integration:** `stellar-wallets-kit`
+- **Testing:** Jest
 
-## 🎥 Demo Video
-[Link to Demo Video Placeholder]
+## ✅ Level 3 Orange Belt Requirements Checklist
+- [x] All Level 1 & 2 requirements met
+- [x] Multi-wallet integration
+- [x] Meaningful frontend testing (Jest installed & running 8 passing tests)
+- [x] Clean, component-based folder structure
+- [x] Error handling & Real-time updates
 
----
-*Built with ❤️ for the Stellar Developer Program.*
+## 👨‍💻 Author
+**Ajinkya Mandlik**
+
+⭐ If you found this project useful, consider giving it a star!
