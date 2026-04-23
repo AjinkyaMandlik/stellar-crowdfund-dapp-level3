@@ -62,11 +62,12 @@ Comprehensive frontend testing for core dApp logic:
 - Donation calculation logic
 - Progress percentage math
 - Edge cases (Max funding caps)
-Testing (Jest)
-Total Test Suites: 2
-Total Tests: 8
-Status: ✅ All Passing
-📸 Test Output
+  
+-🧪 Testing (Jest)
+ -Total Test Suites: 2
+ -Total Tests: 8
+ -Status: ✅ All Passing
+## 📸 Test Output
 <img width="758" height="569" alt="image" src="https://github.com/user-attachments/assets/4397e7ac-823e-4c1b-9c8e-86097a604efd" />
 
 
