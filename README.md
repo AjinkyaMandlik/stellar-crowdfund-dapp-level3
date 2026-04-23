@@ -4,7 +4,13 @@
 A production-ready decentralized crowdfunding application built on the Stellar Testnet using Soroban smart contracts. This dApp enables users to connect multiple wallets, donate XLM, view real-time campaign progress directly from the blockchain, and includes robust frontend testing.
 
 ## 🌐 Live Demo
-*(Add your deployed link here if applicable)*
+https://stellar-crowdfund-dapp.netlify.app/
+
+<img width="1348" height="639" alt="Screenshot 2026-04-23 213924" src="https://github.com/user-attachments/assets/b7194db5-6cb9-457b-b87a-126300157f3e" />
+
+
+## 🎥 Demo Video
+👉 https://drive.google.com/drive/folders/1I6nBC42i2FF8Q7kbtWVpo_HMe1bYZlhX
 
 ## 🎯 Objective
 To build a decentralized application that:
@@ -56,6 +62,13 @@ Comprehensive frontend testing for core dApp logic:
 - Donation calculation logic
 - Progress percentage math
 - Edge cases (Max funding caps)
+Testing (Jest)
+Total Test Suites: 2
+Total Tests: 8
+Status: ✅ All Passing
+📸 Test Output
+<img width="758" height="569" alt="image" src="https://github.com/user-attachments/assets/4397e7ac-823e-4c1b-9c8e-86097a604efd" />
+
 
 ## 🎨 UI / UX
 - Clean modern glassmorphism design (Tailwind CSS)
